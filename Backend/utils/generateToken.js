@@ -9,9 +9,9 @@ const generateToken = async(user)=>{
     phone: user.phone,
     address: user.address,
   },
-  process.env.JWT_SECRET,
+  process.env.JWT_SECRET || 'fallback_secret_change_me',
   {
-    expiresIn: process.env.ACCESS_TOKEN_EXPIRY_KEY,
+    expiresIn: process.env.ACCESS_TOKEN_EXPIRY_KEY || '7d',
   }
     )
 };
