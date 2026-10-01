@@ -17,10 +17,13 @@ const allowedOrigins = (process.env.CORS_ORIGIN || 'http://localhost:5173')
   .split(',')
   .map(o => o.trim());
 
+// Allow all Vercel preview deployments for this project
+const vercelPreviewPattern = /^https:\/\/foodapp.*\.vercel\.app$/;
+
 app.use(cors({
   origin: (origin, callback) => {
     // allow requests with no origin (e.g. mobile apps, curl, Postman)
-    if (!origin || allowedOrigins.includes(origin)) {
+    if (!origin || allowedOrigins.includes(origin) || vercelPreviewPattern.test(origin)) {
       callback(null, true);
     } else {
       callback(new Error(`CORS: origin '${origin}' not allowed`));
