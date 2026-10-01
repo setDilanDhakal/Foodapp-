@@ -1,0 +1,43 @@
+$kind: http-request
+url: http://localhost:3000/api/food/additem
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: name
+      value: coke
+      description: ""
+      disabled: false
+    - type: text
+      key: description
+      value: cool drink
+      description: ""
+      disabled: false
+    - type: text
+      key: price
+      value: "180"
+      description: ""
+      disabled: false
+    - type: text
+      key: category
+      value: soft drink
+      description: ""
+      disabled: false
+    - type: text
+      key: preparationTime
+      value: "1"
+      description: ""
+      disabled: false
+    - type: file
+      key: image
+      src:
+        - postman-cloud:///1f1b26b3-1b0e-4f40-88fb-827958de2e8c
+      description: ""
+      disabled: false
+    - type: text
+      key: stock
+      value: "100"
+      description: ""
+      disabled: false
+order: 1789627216351

@@ -1,0 +1,9 @@
+$kind: http-request
+url: http://localhost:3000/api/users/login
+method: POST
+body:
+  type: urlencoded
+  content:
+    email: cccc@gmail.com
+    password: cccccccc
+order: 2145584241274681

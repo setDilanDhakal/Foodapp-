@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:3000/api/food/getfood
+method: GET
+order: 3789638016316212
